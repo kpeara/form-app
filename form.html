@@ -11,7 +11,8 @@
             rel="stylesheet"
         />
     </head>
-    <body>
+    <body class="bg-gray-200">
+        <!-- vue components can't be added to body-->
         <div
             id="app"
             :class="`bg-${ appColor}-200 select-none text-lg w-screen h-screen font-mono`"
@@ -19,7 +20,7 @@
             <!-- title -->
             <div :class="`flex justify-center items-center pt-8`">
                 <h1
-                    :class="`flex bg-${ appColor }-300 border-8 border-${ appColor }-900 p-4 rounded-lg justify-center text-${ appColor }-900 font-bold text-4xl`"
+                    :class="`flex bg-${ appColor }-300 border-8 border-${ appColor }-900 px-4 rounded-lg justify-center text-${ appColor }-900 font-bold text-4xl`"
                 >
                     Your Profile
                 </h1>

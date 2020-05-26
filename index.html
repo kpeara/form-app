@@ -11,7 +11,7 @@
             rel="stylesheet"
         />
     </head>
-    <body>
+    <body class="bg-gray-200">
         <!-- background -->
         <div
             id="app"
@@ -19,17 +19,17 @@
         >
             <!-- box -->
             <div
-                :class="`text-lg bg-white font-mono rounded-lg p-4 border-8 border-${ appColor }-900`"
+                :class="`text-lg bg-white font-mono rounded-lg border-8 border-${ appColor }-900`"
             >
                 <!-- title -->
                 <h1
-                    :class="`p-6 bg-${ appColor }-300 text-center uppercase font-bold text-${ appColor }-900 text-4xl rounded-lg border-8 border-${ appColor }-900`"
+                    :class="`m-8 bg-${ appColor }-300 text-center uppercase font-bold text-${ appColor }-900 text-4xl rounded-lg border-8 border-${ appColor }-900`"
                 >
-                    login
+                    LOGIN
                 </h1>
 
                 <!-- login fields -->
-                <div class="flex flex-col m-4 mt-8">
+                <div class="flex flex-col mt-8">
                     <app-field :color="appColor" label="username"></app-field>
                     <app-field
                         :color="appColor"
