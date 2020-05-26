@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Snippet</title>
+    <!-- CDNs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" :class="`select-none text-lg w-screen h-screen font-mono`">
+
+        <!-- title -->
+        <h1 :class="`p-6 bg-${ formColor }-300 text-center uppercase font-bold text-${ formColor }-900 text-4xl border-b-8 border-${ formColor }-900`">~\.form.\~</h1>
+
+        <h1 :class="`flex justify-center mt-8 text-${ formColor }-900 font-bold text-4xl`">Your Profile</h1>
+        <div class="flex justify-center">
+            <textarea id="about-field" cols="60" rows="10" placeholder="About You..." :class="`outline-none resize-x m-8 p-4 border-8 text-${ formColor }-900 border-${ formColor }-900 rounded-lg`"></textarea>
+        </div>
+
+        <!-- form fields -->
+        <div class="lg:flex justify-center">
+            <div class="lg:flex flex-col lg:m-4">
+                <app-form-field :color=formColor label="first name"></app-form-field>
+                <app-form-field :color=formColor label="last name"></app-form-field>
+            </div>
+            <div class="lg:flex flex-col lg:m-4">
+                <app-form-field :color=formColor label="username"></app-form-field>
+                <app-form-field :color=formColor label="password" field_type="password"></app-form-field>
+            </div>
+        </div>
+
+        <!-- submit button -->
+        <div class="flex justify-center m-8">
+            <button :class="`bg-${ formColor }-200 hover:bg-${ formColor }-300 text-${ formColor }-900 border-8 border-${ formColor }-900 rounded-full px-4 py-2`">Submit</button>
+        </div>
+    </div>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
