@@ -9,12 +9,13 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <div id="app" :class="`select-none text-lg w-screen h-screen font-mono`">
+    <div id="app" :class="`bg-${ formColor}-200 select-none text-lg w-screen h-screen font-mono`">
 
         <!-- title -->
-        <h1 :class="`p-6 bg-${ formColor }-300 text-center uppercase font-bold text-${ formColor }-900 text-4xl border-b-8 border-${ formColor }-900`">~\.form.\~</h1>
+        <div :class="`flex justify-center items-center pt-8`">
+            <h1 :class="`flex bg-${ formColor }-300 border-8 border-${ formColor }-900 p-4 rounded-lg justify-center text-${ formColor }-900 font-bold text-4xl`">Your Profile</h1>
+        </div>
 
-        <h1 :class="`flex justify-center mt-8 text-${ formColor }-900 font-bold text-4xl`">Your Profile</h1>
         <div class="flex justify-center">
             <textarea id="about-field" cols="60" rows="10" placeholder="About You..." :class="`outline-none resize-x m-8 p-4 border-8 text-${ formColor }-900 border-${ formColor }-900 rounded-lg`"></textarea>
         </div>
