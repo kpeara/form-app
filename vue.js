@@ -1,5 +1,5 @@
-// login field tailwind css component
-Vue.component("app-login-field", {
+// form field tailwind css component
+Vue.component('app-field', {
     props: ['color', 'label', 'field_type'],
     template: `
     <div class="flex justify-center">
@@ -10,12 +10,12 @@ Vue.component("app-login-field", {
         </div>
         </div>
     </div>
-    `
-})
+    `,
+});
 
 var app = new Vue({
-    el: "#app",
+    el: '#app',
     data: {
-        loginColor: "pink" // default color
-    }
-})
+        appColor: 'gray', // default color
+    },
+});

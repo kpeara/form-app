@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Snippet</title>
-    <!-- CDNs -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body>
-    <!-- background -->
-    <div id="app" :class="`select-none flex justify-center items-center bg-${ loginColor }-200 w-screen h-screen`">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login Snippet</title>
+        <!-- CDNs -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link
+            href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- background -->
+        <div
+            id="app"
+            :class="`select-none flex justify-center items-center bg-${ appColor }-200 w-screen h-screen`"
+        >
+            <!-- box -->
+            <div
+                :class="`text-lg bg-white font-mono rounded-lg p-4 border-8 border-${ appColor }-900`"
+            >
+                <!-- title -->
+                <h1
+                    :class="`p-6 bg-${ appColor }-300 text-center uppercase font-bold text-${ appColor }-900 text-4xl rounded-lg border-8 border-${ appColor }-900`"
+                >
+                    login
+                </h1>
 
-        <!-- box -->
-        <div :class="`text-lg bg-white font-mono rounded-lg p-4 border-8 border-${ loginColor }-900`">
+                <!-- login fields -->
+                <div class="flex flex-col m-4 mt-8">
+                    <app-field :color="appColor" label="username"></app-field>
+                    <app-field
+                        :color="appColor"
+                        label="password"
+                        field_type="password"
+                    ></app-field>
+                </div>
 
-            <!-- title -->
-            <h1 :class="`p-6 bg-${ loginColor }-300 text-center uppercase font-bold text-${ loginColor }-900 text-4xl rounded-lg border-8 border-${ loginColor }-900`">login</h1>
-
-            <!-- login fields -->
-            <div class="flex flex-col m-4 mt-8">
-                <app-login-field :color=loginColor label="username"></app-login-field>
-                <app-login-field :color=loginColor label="password" field_type="password"></app-login-field>
-            </div>
-
-            <!-- login button -->
-            <div class="flex justify-center m-8">
-                <button :class="`bg-${ loginColor }-200 hover:bg-${ loginColor }-300 text-${ loginColor }-900 border-8 border-${ loginColor }-900 rounded-full px-4 py-2`">Login</button>
+                <!-- login button -->
+                <div class="flex justify-center m-8">
+                    <button
+                        :class="`bg-${ appColor }-200 hover:bg-${ appColor }-300 text-${ appColor }-900 border-8 border-${ appColor }-900 rounded-full px-4 py-2`"
+                    >
+                        Login
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="vue/login.js"></script>
-</body>
+        <script src="vue.js"></script>
+    </body>
 </html>
